@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 	header("Content-Type:text/html; charset=utf-8");
 ?>
 
@@ -91,7 +91,7 @@
         </select>
 
         <br /><br />
-        <span id="play"><img src="Image/Play.png" title="Play"></span>
+        <span id="play">4</span>
         <span id="stop"><</span>
         <span id="prevsong">9</span>
         <span id="nextsong">:</span>
@@ -105,7 +105,7 @@
         </div>
 
         <div id="volume">
-            <label for="vol">Volume¡G</label>
+            <label for="vol">Volumeï¼š</label>
             <input id="vol" type="range" max="100" min="0" value="50" />
         </div>
 
@@ -114,7 +114,7 @@
                 00:00/00:00
             </div>
             <span id="info2"></span>
-            <marquee id="info" width="100%">½Ğ«ö¼½©ñÁä~!!</marquee>
+            <marquee id="info" width="100%">è«‹æŒ‰æ’­æ”¾éµ~!!</marquee>
         </div>
     </div>
     <script>
@@ -151,11 +151,11 @@
         random.addEventListener("click", randomSong);
         allloop.addEventListener("click", allloopSong);
 
-        //¥ş¦±´`Àô
+        //å…¨æ›²å¾ªç’°
         function allloopSong() {
-            if (info2.innerText != "¥ş¦±´`Àô") {
+            if (info2.innerText != "å…¨æ›²å¾ªç’°") {
                 audio.loop = false;
-                info2.innerText = "¥ş¦±´`Àô";
+                info2.innerText = "å…¨æ›²å¾ªç’°";
             }
             else {
 
@@ -163,22 +163,22 @@
             }
         }
 
-        //ÀH¾÷¼½©ñ
+        //éš¨æ©Ÿæ’­æ”¾
         function randomSong() {
-            if (info2.innerText != "ÀH¾÷¼½©ñ") {
+            if (info2.innerText != "éš¨æ©Ÿæ’­æ”¾") {
                 audio.loop = false;
-                info2.innerText = "ÀH¾÷¼½©ñ"
+                info2.innerText = "éš¨æ©Ÿæ’­æ”¾"
             }
             else {
                 info2.innerText = ""
             }
         }
 
-        //³æ¦±´`Àô¼½©ñ
+        //å–®æ›²å¾ªç’°æ’­æ”¾
         function loopSong() {
-            if (info2.innerText != "³æ¦±´`Àô") {
+            if (info2.innerText != "å–®æ›²å¾ªç’°") {
                 audio.loop = true;
-                info2.innerText = "³æ¦±´`Àô"
+                info2.innerText = "å–®æ›²å¾ªç’°"
             }
             else {
                 audio.loop = false;
@@ -186,13 +186,13 @@
             }
         }
 
-        //¥Î¶i«×bar¸õ¦Ü«ü©w®É¶¡
+        //ç”¨é€²åº¦barè·³è‡³æŒ‡å®šæ™‚é–“
         settime.addEventListener("click", function (evnt) {
             var a = evnt.offsetX / 400;
             audio.currentTime = audio.duration * a;
         });
 
-        //¨ú±o¼½©ñ®É¶¡¶i«×
+        //å–å¾—æ’­æ”¾æ™‚é–“é€²åº¦
         function getDuration() {
             durationTime = formatSecond(audio.duration);
             currentTime = formatSecond(audio.currentTime);
@@ -201,7 +201,7 @@
             if (audio.currentTime <= audio.duration)
                 setTimeout("getDuration()", "1000");
             if (audio.duration == audio.currentTime) {
-                if (info2.innerText == "ÀH¾÷¼½©ñ") {
+                if (info2.innerText == "éš¨æ©Ÿæ’­æ”¾") {
                     var r = Math.floor(Math.random() * music.options.length)
                     s.src = music.options[r].value;
                     s.title = music.options[r].text;
@@ -211,7 +211,7 @@
                 }
                 else {
                     if (music.selectedIndex == music.options.length - 1) {
-                        if (info2.innerText == "¥ş¦±´`Àô") {
+                        if (info2.innerText == "å…¨æ›²å¾ªç’°") {
                             music.selectedIndex = 0;
                             btnDicision();
                         }
@@ -225,7 +225,7 @@
             }
         }
 
-        //±N¬íÂà¦¨®É¤À¬í
+        //å°‡ç§’è½‰æˆæ™‚åˆ†ç§’
         function formatSecond(secs) {
             var h = Math.floor(secs / 3600);
             var min = Math.floor((secs - (h * 3600)) / 60);
@@ -235,7 +235,7 @@
             return min + ":" + sec;
         }
 
-        //ÀR­µ¥\¯à
+        //éœéŸ³åŠŸèƒ½
         function SetMuted() {
             if (muted.innerText == "V") {
                 audio.muted = true;
@@ -247,7 +247,7 @@
             }
         }
 
-        //¤W¤@¦±¤U¤@¦±
+        //ä¸Šä¸€æ›²ä¸‹ä¸€æ›²
         function SongChange(boolNextPrev) {
             if (boolNextPrev) {
                 index = music.selectedIndex + 1;
@@ -262,7 +262,7 @@
             btnDicision();
         }
 
-        //­µ¼Ö¿ï¾Ü
+        //éŸ³æ¨‚é¸æ“‡
         function SongSelect() {
             s.src = music.options[music.selectedIndex].value;
             s.title = music.options[music.selectedIndex].text;
@@ -270,7 +270,7 @@
             btnDicision();
         }
 
-        //§PÂ_´«ºq¦±®É¬O§_ª½±µ¼½©ñ
+        //åˆ¤æ–·æ›æ­Œæ›²æ™‚æ˜¯å¦ç›´æ¥æ’­æ”¾
         function btnDicision() {
             if (play.innerText == ";") {
                 play.innerText = "4";
@@ -278,31 +278,31 @@
             }
         }
 
-        //­µ¼Ö¼½©ñ
+        //éŸ³æ¨‚æ’­æ”¾
         function PlaySong() {
             if (play.innerText == "4") {
                 audio.play();
-                info.innerText = "²{¥¿¼½©ñ:" + s.title;
+                info.innerText = "ç¾æ­£æ’­æ”¾:" + s.title;
                 play.innerText = ";";
             }
             else {
                 audio.pause();
-                info.innerText = "­µ¼Ö¼È°±";
+                info.innerText = "éŸ³æ¨‚æš«åœ";
                 play.innerText = "4";
             }
         }
 
-        //½Õ¾ã­µ¶q
+        //èª¿æ•´éŸ³é‡
         function VolumeChange() {
             audio.volume = vol.value / 100;
         }
 
-        //­µ¼Ö°±¤î¼½©ñ
+        //éŸ³æ¨‚åœæ­¢æ’­æ”¾
         function StopSong() {
             audio.pause();
             audio.currentTime = 0;
             play.innerText = "4";
-            info.innerText = "­µ¼Ö°±¤î¼½©ñ~~~~";
+            info.innerText = "éŸ³æ¨‚åœæ­¢æ’­æ”¾~~~~";
         }
     </script>
 </body>
