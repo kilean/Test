@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -75,7 +75,7 @@
     <div id="conPanel">
         <select id="music">
             <option value="Music/Another realm.mp3">Another realm</option>
-            <option value="Music/Butterfly.mp3">Butterfly</option>
+            <option value="Music/Butterfly.m">Butterfly</option>
             <option value="Music/Fairy Wings.mp3">Fairy Wings</option>
             <option value="Music/Paper Clouds.mp3">Paper Clouds</option>
             <option value="Music/Straw Hats.mp3">Straw Hats</option>
