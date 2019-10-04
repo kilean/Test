@@ -1,3 +1,7 @@
+<?php
+	header("Content-Type:text/html; charset=utf-8");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,10 +91,9 @@
         </select>
 
         <br /><br />
-        <span id="play">4</span>
+        <span id="play"><img src="Image/Play.png" title="Play"></span>
         <span id="stop"><</span>
         <span id="prevsong">9</span>
-        <span id="nexttime">8</span>
         <span id="nextsong">:</span>
         <span id="muted">V</span>
         <span id="loop">q</span>
