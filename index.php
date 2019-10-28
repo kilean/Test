@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>My Player</title>
+    <title>Test</title>
     <style>
         /*CSS*/
         #conPanel {
